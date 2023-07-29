@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #ffffff;
+    background: url("https://i.pinimg.com/564x/a4/22/9a/a4229a483cf76e0b5458450c2e591ff3--d-texture-paint-texture.jpg") center center;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+canvas{
+    background-color: #111;
+}
+
+.score{
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Handjet', cursive;
+    font-weight: 500;
+    font-size: 1.8rem
+}
+
+.score--value{
+    font-weight: 700;
+    font-size: 4.5rem;
+    display: block;
+    margin-top: -10px;
+}
+
+.menu-screen{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.game-over{
+    color: #aa0606;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Handjet', cursive;
+    font-size: 3rem;
+}
+
+.final-score{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.btn-play{
+    color: #333;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 15px 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.btn-play:hover{
+    color: green;
+    opacity: 0.7;
+    transform: scale(0.9);
+}
+
+.btns-mobile{
+    background-color: #333;
+    height: 100px;
+    width: 150px;
+    margin-top: 20px;
+    column-count: 2;
+}
+
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btns .btn{
+    background-color: #ffffff;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    transition: 0.2s ease-in;
+}
+
+.btns .btn:hover{
+    background-color: #000;
+    color: orange;
+    transform: scale(1.1);
+}
+
+.btns-left-right{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btns-up-down{
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+}
+
+@media(max-width: 1900px){
+    .btns{
+        display: none;
+    }
+}
+
+@media(max-width: 600px){
+    .btns{
+        display: flex;
+    }
+}
